@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--<meta http-equiv="x-ua-compatible" content="ie=edge"/>-->
+    <title>Document</title>
+    <script type="text/javascript">
+        function javacalljstest(data) {
+            var div = document.getElementsByClassName('mytest')[0];
+            var img = document.getElementById('img');
+            div.innerHTML = data;
+            // img.src = data;
+            var reader = new FileReader();
+            // 将文件以Data URL形式进行读入页面
+            reader.readAsDataURL(data);
+            reader.onload = function(e){
+                console.log(e.target.result);
+                img.src = e.target.result
+            }
+        }
+    </script>
+<link href="app.3333b.css" rel="stylesheet"></head>
+<body>
+<div id="app"></div>
+<!--<script type="text/javascript" src="mytest.js"></script>-->
+<script type="text/javascript" src="app.e8fc8083e0c94dc7b2d4.js"></script></body>
+</html>
